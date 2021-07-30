@@ -1,43 +1,37 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
-#title {
-  background-color: #ff4C68;
-  color: #fff;
-}
-
-.container-fluid{
-  padding: 3% 15%;
-}
-
-h1{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
-h2{
+h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-style: bold;
-  font-size: 3rem;
-  line-height: 1.5;
-
-}
-
-h3{
-  font-family: 'Monserrat', sans-serif;
-  font-style: bold;
-  font-size: 1.5rem;
-  font-weight: 900;
 }
 
 p{
   color: #8F8F8F;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Headings */
+
+.big-heading{
   font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.section-heading{
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
 
@@ -73,21 +67,56 @@ p{
   margin-right: 5px;
 }
 
+
+/* Title  */
+
+#title {
+  background-color: #ff4C68;
+  color: #fff;
+  text-align: left;
+}
+
+#title .container-fluid{
+  padding: 3% 15% 7%;
+}
+
+
 /* Title Image */
 .title-image{
-  width: 60%;
+  width: 18%;
   transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
+}
+
+/* when 1028 pix or less change style */
+@media (max-width:1028px){
+
+  #title{
+    text-align: center;
+  }
+  .title-image{
+    position: static;
+    transform: rotate(0);
+    width: 50%
+  }
+
 }
 
 /* Features Section */
 
 #features{
-  padding: 7% 15%;
+  background-color: #FFF;
+  position: relative;
+  z-index: 1;
 }
 
 .feature-box{
-  text-align: center;
   padding: 5%;
+}
+
+.feature-title{
+  font-size: 1.5rem;
 }
 
 .features-icon{
@@ -102,14 +131,14 @@ p{
 /* Testimonial Section */
 
 #testimonials{
-  text-align: center;
   background-color: #EF8172;
   color: #FFF;
 
 }
 
-.carousel-item{
-    padding: 7% 15%;
+.testimonial-text{
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
 .testimonial-img{
@@ -122,7 +151,6 @@ p{
 
 #press{
   background-color: #EF8172;
-  text-align: center;
   padding-bottom: 3%;
 }
 
@@ -134,10 +162,32 @@ p{
 /* Pricing Section */
 #pricing{
   padding: 100px;
-  text-align: center;
 
 }
 
 .pricing-col{
   padding: 3% 2%;
+}
+
+.price-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Call to Action Section */
+
+#cta{
+  background-color: #FF4C66;
+  color: #FFF;
+
+}
+
+/* Footer Section */
+
+.social-icons{
+  margin-bottom: 2%;
+}
+
+.social-icon{
+  margin: .7rem;
 }
